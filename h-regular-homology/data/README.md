@@ -9,4 +9,4 @@ In order to represent such a list as a finite space in Kenzo, we execute:
 ```
 Files in [cores](https://github.com/jcuevas-rozo/finite-topological-spaces-kenzo/tree/master/data/cores) (resp. [weakcores](https://github.com/jcuevas-rozo/finite-topological-spaces-kenzo/tree/master/data/weakcores)) folder were used for making Table 1 (resp. Table 2) and those in [subdivisions](https://github.com/jcuevas-rozo/finite-topological-spaces-kenzo/tree/master/data/subdivisions) folder were used for making Table 3 and Table 4. 
 
-  [1] Cuevas-Rozo J., Lambán L., Romero A. & Sarria H., *Effective homological computations on finite topological spaces* (in revision).
+  [1] Cuevas-Rozo J., Lambán L., Romero A. & Sarria H., *Effective homological computations on finite topological spaces*, AAECC, (), 1-24, DOI: [10.1007/s00200-020-00462-8](https://link.springer.com/article/10.1007/s00200-020-00462-8)

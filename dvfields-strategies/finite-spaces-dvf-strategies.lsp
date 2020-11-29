@@ -49,6 +49,17 @@
     (:reverse-outdegree  (compare list card-fbasis #'>))
     (otherwise (error "~A is not an implemented strategy" strategy))))
 
+
+(DEFUN SORTING-BY-STRATEGY (finspace strategy)
+  (let* ((elements (<a-b> 1 (cardinality finspace)))
+         (nil-stong (nilpot (stong finspace)))
+         (stong-ubasis (binarymatrice-to-ubasis nil-stong))
+         (stong-fbasis (binarymatrice-to-fbasis nil-stong))
+         (card-ubasis (map 'vector #'length stong-ubasis))
+         (card-fbasis (map 'vector #'length stong-fbasis)))
+    (choose-strategy elements card-ubasis card-fbasis strategy)))
+
+
 #|
 (DEFMETHOD TOPOGENOUS-TO-LIST ((topogenous array))
   #| Convert an upper triangular topogenous matrix into a list (diagonal entries are not in the list) |#
@@ -176,6 +187,20 @@
                                                                          str-row str-col)))))
         (format T "~A ---> rows: ~A , cols: ~A  ==> ~A~%~%" (length dvf) str-row str-col dvf)
         (push (length dvf) rsl)))))
+
+
+(DEFUN DVFIELD-STRATEGIES-COL-ROW (finspace strategy-cols strategy-rows)
+  (let* ((nil-stong (nilpot (stong finspace)))
+         (stong-ubasis (binarymatrice-to-ubasis nil-stong))
+         (stong-fbasis (binarymatrice-to-fbasis nil-stong))
+         (card-ubasis (map 'vector #'length stong-ubasis))
+         (card-fbasis (map 'vector #'length stong-fbasis))
+         (cardinal (cardinality finspace))
+         (vector-admissible-values (vector-admissible-values stong-ubasis (top finspace) cardinal)))
+    (DVFIELD-COMPUTATION stong-ubasis cardinal
+                         card-ubasis card-fbasis
+                         vector-admissible-values
+                         strategy-rows strategy-cols)))
 
 
 (DEFUN EQUAL-DVFIELD-STRATEGIES (finspace strategies)

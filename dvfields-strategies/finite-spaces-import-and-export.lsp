@@ -24,9 +24,13 @@
       (close jlcr))))
   
 
-(DEFUN EXPORT-FINITE-SPACE-TO-FILE (finspace file)
-  (let ((lcovers (binarymatrice-to-ubasis (nilpot (stong finspace)))))
-    (export-lcovers-to-file lcovers file)))
+(DEFUN EXPORT-FINITE-SPACE-TO-FILE (finspace-or-stong file)
+  (let (mat)
+    (typecase finspace-or-stong
+      (finite-space (setf mat (nilpot (stong finspace-or-stong))))
+      (matrice (setf mat (nilpot finspace-or-stong))))
+    (let ((lcovers (binarymatrice-to-ubasis mat)))
+      (export-lcovers-to-file lcovers file))))
 
 
 #|

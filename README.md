@@ -6,4 +6,4 @@ We have implemented different functions in order to use point reductions methods
 
   [1] Barmak J.A., *Algebraic topology of finite topological spaces and applications*, Lecture Notes in Mathematics, Vol. 2032 (2011).
  
-  [2] Cuevas-Rozo J., Lambán L., Romero A. & Sarria H., *Effective homological computations on finite topological spaces*, AAECC, (), 1-24, DOI: [10.1007/s00200-020-00462-8](https://link.springer.com/article/10.1007/s00200-020-00462-8)
+  [2] Cuevas-Rozo J., Lambán L., Romero A. & Sarria H., *Effective homological computations on finite topological spaces*, Applicable Algebra in Engineering, Communication and Computing (2020). DOI: [10.1007/s00200-020-00462-8](https://link.springer.com/article/10.1007/s00200-020-00462-8)

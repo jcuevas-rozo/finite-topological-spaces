@@ -129,6 +129,10 @@
         (push (list i (1+ j)) rslt)))))
 
 
+(DEFUN STONG-TO-LCOVERS (stong)
+  (vector-to-list (binarymatrice-to-ubasis (nilpot stong))))
+
+
 (DEFUN LIST-TO-VECTOR (list)
   (map 'vector #'identity list))
 

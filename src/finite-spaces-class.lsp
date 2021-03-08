@@ -611,7 +611,7 @@
                   #| rowistatus = {x : h(x) = h(i), x --> i} |#
                   (unless (eql 1 rowistatus)
                     (when (and (admissible (top finspace) rowi j) ; here we need the topogenous matrix
-                               (null-intersection-p rowistatus coljlist)) ; avoids a loop  x --> i -> j -> x
+                               (nullintersection-p rowistatus coljlist)) ; avoids a loop  x --> i -> j -> x
                       (setf (svref status (1- rowi)) 1) ; rowi is a source
                       (setf rowistatus (insert rowi rowistatus))
                       (setf matched (insert j matched))

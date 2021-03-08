@@ -138,7 +138,7 @@
                 (unless (member rowi matched)
                   (let ((rowistatus (svref status (1- rowi))))
                     (unless (eql 1 rowistatus)
-                      (when (null-intersection-p rowistatus coljlist)
+                      (when (nullintersection-p rowistatus coljlist)
                         (setf (svref status (1- rowi)) 1)
                         (setf rowistatus (insert rowi rowistatus))
                         (setf matched (insert j matched))

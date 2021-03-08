@@ -153,6 +153,19 @@
 |#
 
 
+(DEFUN NULLINTERSECTION-P (list1 list2)
+  #| Same NULL-INTERSECTION-P but sorting the parameters in ascending order |#
+  (let ((sorted-list1 (sort (copy-list list1) #'<))
+        (sorted-list2 (sort (copy-list list2) #'<)))
+    (null-intersection-p sorted-list1 sorted-list2)))
+
+
+#|
+(nullintersection-p  '(4 3 5) '(1 2 3))
+(null-intersection-p '(4 3 5) '(1 2 3))
+|#
+
+
 (DEFUN SAFE-* (arg1 arg2)
    #| This is in 'New-Smith' |#
   (declare (type fixnum arg1 arg2))
